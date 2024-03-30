@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="dogs.css">
+</head>
+
+<body>
+    <h1>Doggos!</h1>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="stocks.html">Stocks</a></li>
+            <li><a href="dogs.html">Dogs</a></li>
+        </ul>
+    </nav>
+    <h1>Doggos! &#128021;</h1>
+
+    <div class="carousel-container">
+        <button id="prevButton" class="nav-button" onclick="prevImage()">❮</button>
+        <div id="image-carousel" class="carousel"></div>
+        <button id="nextButton" class="nav-button" onclick="nextImage()">❯</button>
+    </div>
+    <div class="breed-buttons" id="breed-buttons">
+    </div>
+    <div class="breed-info" id="breed-info"></div>
+    <div id="audioInstructions">
+        <h2>Audio Instructions</h2>
+        <p>Ensure your mic is enabled to be able to use this feature</p>
+        <ul>
+            <li> Load Dog Breed <ol>
+                    <li>Say: <b>Load Dog Breed &lt;Dog Breed Name&gt;</b></li>
+                </ol>
+            </li>
+            <li> Navigate to a Different Page <ol>
+                    <li>Say: <b>Navigate to &lt;page&gt;</b></li>
+                </ol>
+            </li>
+            <li> Change the Page Color <ol>
+                    <li>Say: <b>Change the color to &lt;color&gt;</b></li>
+                </ol>
+            </li>
+            <li> Say Hello Back to you! <ol>
+                    <li>Say: <b>Hello</b></li>
+                </ol>
+            </li>
+        </ul>
+        <div class="audio-button">
+            <button id="audioOn">Turn On Audio</button>
+            <button id="audioOff">Turn Off Audio</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="dogs.js" defer></script>
+</body>
+
+</html>

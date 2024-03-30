@@ -1,0 +1,139 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: pink;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: yellow;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+table {
+    background-color: lightgray;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 3px solid black;
+    padding: 15px;
+}
+
+#audioInstructions {
+    background-color: #42a5f5;
+    border: 1px solid #333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#audioInstructions h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+#audioInstructions p {
+    margin: 5px 0;
+}
+
+#audioInstructions ul {
+    text-align: left;
+    padding: 0;
+    list-style: disc;
+
+}
+
+#audioInstructions ol {
+    list-style: circle;
+}
+
+.audio-button {
+    margin: 10px;
+}
+
+.audio-button button {
+    background-color: #00f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.audio-button button:hover {
+    background-color: #0056b3;
+}
+
+#stockTicker {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style the lookup button */
+#lookup {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#lookup:hover {
+    background-color: #0056b3;
+}
+
+#days {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

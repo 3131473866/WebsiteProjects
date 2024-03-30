@@ -1,0 +1,169 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: pink;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: yellow;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 100px;
+    cursor: pointer;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+.home-buttons {
+    display: flex;
+    margin: 20px;
+}
+
+.custom-button {
+    appearance: none;
+    background-color: #000000;
+    border: 2px solid #1A1A1A;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 10px;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+    will-change: transform;
+}
+
+@media (min-width: 768px) {
+    .custom-button {
+        padding: 19px 32px;
+    }
+}
+
+.custom-button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.custom-button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+.custom-button:disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: .24;
+}
+
+.quote-box {
+    background-color: #ffeb3b;
+    border: 1px solid #333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.quote {
+    font-style: italic;
+    color: #333;
+}
+
+#audioInstructions {
+    background-color: #42a5f5;
+    border: 1px solid #333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#audioInstructions h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+#audioInstructions p {
+    margin: 5px 0;
+}
+
+#audioInstructions ul {
+    text-align: left;
+    padding: 0;
+    list-style: disc;
+
+}
+
+#audioInstructions ol {
+    list-style: circle;
+}
+
+.audio-button {
+    margin: 10px;
+}
+
+.audio-button button {
+    background-color: #00f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.audio-button button:hover {
+    background-color: #0056b3;
+}
+

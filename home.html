@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="home.css">
+</head>
+
+<body>
+    <h1>Website Projects</h1>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="stocks.html">Stocks</a></li>
+                <li><a href="dogs.html">Dogs</a></li>
+            </ul>
+        </nav>
+        <div class="home-buttons">
+            <a class="custom-button" href="stocks.html">Stocks</a>
+            <a class="custom-button" href="dogs.html">Dogs</a>
+        </div>
+        <div class="quote-box">
+            <h3>Random Quote</h3>
+            <p class="quote" id="quote-text">"Loading..." - Author</p>
+        </div>
+        <div id="audioInstructions">
+            <h2>Audio Instructions</h2>
+            <p>Ensure your mic is enabled to be able to use this feature</p>
+            <ul>
+                <li>
+                    Navigate to a Different Page
+                    <ol>
+                        <li>Say: <b>Navigate to &lt;page&gt;</b></li>
+                    </ol>
+                </li>
+                <li>
+                    Change the Page Color
+                    <ol>
+                        <li>Say: <b>Change the color to &lt;color&gt;</b></li>
+                    </ol>
+                </li>
+                <li>
+                    Say Hello Back to you!
+                    <ol>
+                        <li>Say: <b>Hello</b></li>
+                    </ol>
+                </li>
+            </ul>
+            <div class="audio-button">
+                <button id="audioOn">Turn On Audio</button>
+                <button id="audioOff">Turn Off Audio</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script>
+        // Function to retrieve and display a random quote
+        function getQuote() {
+            fetch("https://zenquotes.io/api/random")
+                .then((response) => response.json())
+                .then((data) => {
+                    document.getElementById("quote-text").textContent = `"${data[0].q}" - ${data[0].a}`;
+                })
+                .catch((error) => {
+                    console.error("Error fetching quote:", error);
+                });
+        }
+
+        getQuote();
+
+        if (annyang) {
+            var commands = {
+                'hello': function () {
+                    alert('Hello, World');
+                },
+                'change the color to :color': function (color) {
+                    document.body.style.backgroundColor = color;
+                },
+                'navigate to :page': function (page) {
+                    window.location.href = page.toLowerCase() + '.html';
+                }
+            };
+            annyang.addCommands(commands);
+        }
+
+        // Turn On/Off Audio
+        document.getElementById('audioOn').addEventListener('click', function () {
+            annyang.start();
+        });
+
+        document.getElementById('audioOff').addEventListener('click', function () {
+            annyang.abort();
+        });
+    </script>
+</body>
+
+</html>
