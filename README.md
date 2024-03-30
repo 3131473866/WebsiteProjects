@@ -21,11 +21,7 @@ Users can utilize audio commands on both the Stocks and Dogs pages:
 
 For stocks, they can say "Lookup [stock]" to populate the field and display the chart for the specified ticker for 30 days.
 For dogs, saying "Load Dog Breed [Dog Breed Name]" opens the container displaying information about the specified dog breed.
-Getting Started
-Clone the repository.
-Navigate to the project directory.
-Open the index.html file in a web browser to view the website locally.
-Credits
+
 This project utilizes various APIs for fetching stock data, Reddit stock discussions, random dog pictures, and dog breed information.
 Chart.js library is used for visualizing stock data.
 Simple-Slider library is used for the carousel functionality.
